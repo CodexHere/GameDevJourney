@@ -1,0 +1,32 @@
+body {
+    font-family: sans-serif;
+    color: #EEE;
+    background: #111;
+}
+
+dl {
+    margin-left: 3em;
+}
+
+dt:has( > a) {
+    display: list-item;
+    list-style-type: disc;
+}
+
+a {
+    color: #FF0;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #8A8A02;
+}
+
+a:hover {
+    color: #FFFFA2;
+    text-decoration: underline;
+}
+
+.yt {
+    margin-left: 2em;
+}
