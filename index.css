@@ -2,6 +2,22 @@ body {
     font-family: sans-serif;
     color: #EEE;
     background: #111;
+    margin: 0 auto;
+    padding: 2em;
+
+    max-width: 50%;
+}
+
+@media screen and (max-width: 1400px) {
+    body {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        max-width: 100%;
+    }
 }
 
 dl {
@@ -29,4 +45,11 @@ a:hover {
 
 .yt {
     margin-left: 2em;
+}
+
+body > dl > dt > h3 {
+    font-size: 2em;
+    color: #FF0;
+    background: #333;
+    padding: 0.25em;
 }
