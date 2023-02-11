@@ -1,3 +1,7 @@
+html {
+    background: #222;
+}
+
 body {
     font-family: sans-serif;
     color: #EEE;
@@ -8,19 +12,7 @@ body {
     max-width: 50%;
 }
 
-@media screen and (max-width: 1400px) {
-    body {
-        max-width: 80%;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    body {
-        max-width: 100%;
-    }
-}
-
-dl {
+body dl dl {
     margin-left: 3em;
 }
 
@@ -52,4 +44,38 @@ body > dl > dt > h3 {
     color: #FF0;
     background: #333;
     padding: 0.25em;
+}
+
+
+
+@media screen and (max-width: 1400px) {
+    body {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        max-width: 100%;
+        margin: 0;
+        padding: 5px;
+    }
+
+    body > dl {
+        margin-left: 0;
+    }
+
+    body > dl > dt > dl {
+        margin: 0;
+    }
+
+    body dl dl {
+        margin-left: 2em;
+    }
 }
