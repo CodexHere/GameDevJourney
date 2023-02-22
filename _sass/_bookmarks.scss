@@ -1,0 +1,81 @@
+#bookmarks {
+  dt:has(> a) {
+    display: list-item;
+    list-style-type: disc;
+  }
+
+  dl dl {
+    margin-left: 3em;
+  }
+
+  /* First Layer */
+  & > dl > dd {
+    margin: 0;
+
+    /* 1st Layer Header, ie Videos/Links */
+    & > h3 {
+      font-size: 2em;
+      padding: 0.25em;
+      margin-bottom: 0.5em;
+      color: var(--color5);
+      background: var(--separator);
+    }
+
+    /* 1st level wrapper */
+    & > dl {
+      margin: 0;
+
+      /* 1st level single items (uncategorized) */
+      & > dt {
+        margin-left: 2em;
+        list-style-type: disclosure-closed;
+      }
+    }
+
+    /* Second Layer */
+    & > dl > dd {
+      margin: 0;
+
+      & > dl > dt {
+        list-style-type: disclosure-closed;
+      }
+
+      /* 2nd Layer Folders, ie Topics */
+      & > h3 {
+        padding-bottom: 5px;
+        color: var(--color3);
+        background: linear-gradient(to right, var(--color3) 0%, transparent 100%) left bottom transparent no-repeat;
+        background-size: 100% 5px;
+        margin-bottom: 0;
+      }
+
+      /* Third Layer */
+      & > dl > dd {
+        /* 3rd Layer Folders, ie Sub-Topics */
+        & h3 {
+          padding-bottom: 5px;
+          color: var(--color4);
+          background: linear-gradient(to right, var(--color4) 0%, transparent 100%) left bottom transparent no-repeat;
+          background-size: 100% 5px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    body {
+      & > dl {
+        margin-left: 0;
+
+        & > dd > dl {
+          margin: 0;
+        }
+      }
+
+      & dl dl {
+        margin-left: 2em;
+      }
+    }
+  }
+}
